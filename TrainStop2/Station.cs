@@ -54,6 +54,10 @@ namespace TrainStop2
 
         public void ReleaseTrain(string trainName)
         {
+            if (_underMaintenance)
+            {
+                throw new ApplicationException($"{_name} is currently under maintenance so cannot release train!");
+            }
             List<ITrain> toBeRemoved = new List<ITrain>();
             bool trainAtStation = false;
             foreach (ITrain train in _trains)

@@ -125,7 +125,7 @@ So my station can grow and repair,
 Maintenance should be allowed to start on a station.
 ```
 
-Stations under maintenance cannot receive or release any trains [ ]
+Stations under maintenance cannot receive or release any trains [✓]
 ```
 As a Station Manager,
 To prevent any accidents,
