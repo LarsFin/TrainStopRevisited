@@ -83,7 +83,7 @@ So I know when a train release was faulty,
 An Alert should be raised when a train is released which isn't at the station.
 ```
 
-Trains which depart from Stations should begin their journey [ ]
+Trains which depart from Stations should begin their journey [✓]
 ```
 As a Train Manager,
 So I can make it on time to my destinations,

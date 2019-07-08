@@ -51,6 +51,7 @@ namespace TrainStop2
             foreach (ITrain train in toBeRemoved)
             {
                 _trains.Remove(train);
+                train.StartMovement();
             }
         }
 
