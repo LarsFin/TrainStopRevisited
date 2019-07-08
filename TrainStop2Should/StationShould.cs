@@ -51,7 +51,7 @@ namespace TrainStop2Should
             Should.Throw<ApplicationException>(() =>
             {
                 station.ReceiveTrain(mockTrain.Object);
-            });
+            }).Message.ShouldBe("Station cannot accept stopped train");
         }
     }
 }
