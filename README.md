@@ -13,7 +13,7 @@ So I can easily refer to my train,
 Trains should have names.
 ```
 
-Stations have names [ ]
+Stations have names [✓]
 ```
 As a Train Manager,
 So I can easily refer to my destinations,
