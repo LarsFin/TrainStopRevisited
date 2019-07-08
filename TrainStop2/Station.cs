@@ -34,9 +34,14 @@ namespace TrainStop2
 
         public void ReleaseTrain(string trainName)
         {
-            for (int i = 0; i < _trains.Count; i++)
+            List<ITrain> toBeRemoved = new List<ITrain>();
+            foreach (ITrain train in _trains)
             {
-                _trains.Remove(_trains[i]);
+                toBeRemoved.Add(train);
+            }
+            foreach (ITrain train in toBeRemoved)
+            {
+                _trains.Remove(train);
             }
         }
 
