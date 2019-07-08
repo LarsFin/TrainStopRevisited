@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TrainStop2
 {
@@ -20,7 +21,13 @@ namespace TrainStop2
 
         public void ReceiveTrain(ITrain train)
         {
-            _trains.Add(train);
+            if (train.IsMoving)
+            {
+                _trains.Add(train);
+            } else
+            {
+                throw new ApplicationException("Station cannot accept stopped train");
+            }
         }
 
         public string Name
