@@ -10,6 +10,7 @@ namespace TrainStop2
         public Station(string name)
         {
             _name = name;
+            _trains = new List<ITrain>();
         }
 
         public string Name

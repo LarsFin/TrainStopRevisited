@@ -27,7 +27,7 @@ So I know when a train has left,
 Trains should have a state of motion.
 ```
 
-Stations should be able to hold trains [ ]
+Stations should be able to hold trains [✓]
 ```
 As a Train Manager,
 So I can stop my train at a station,
