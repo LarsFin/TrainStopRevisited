@@ -23,7 +23,7 @@
 
         public void StopMovement()
         {
-            
+            _isMoving = false;
         }
 
         public string Name
