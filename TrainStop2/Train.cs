@@ -2,7 +2,7 @@
 {
     public interface ITrain
     {
-        void SetMoving(bool status);
+        void StartMovement();
     }
 
     public class Train : ITrain
@@ -15,9 +15,9 @@
             _name = name;
         }
 
-        public void SetMoving(bool status)
+        public void StartMovement()
         {
-            _isMoving = status;
+            _isMoving = true;
         }
 
         public string Name
