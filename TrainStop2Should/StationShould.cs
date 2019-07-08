@@ -95,5 +95,15 @@ namespace TrainStop2Should
             _station.Trains.Contains(mockTrain.Object).ShouldBeFalse();
             _station.Trains.Contains(mockTrain2.Object).ShouldBeTrue();
         }
+
+        [Fact]
+        public void NotReleaseNonExistantTrain()
+        {
+            string fakeTrainName = "Non-existant train!";
+            Should.Throw<ApplicationException>(() =>
+            {
+                _station.ReleaseTrain(fakeTrainName);
+            }).Message.ShouldBe($"The train {fakeTrainName} does not exist at {_station.Name} station!");
+        }
     }
 }
