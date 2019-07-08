@@ -111,7 +111,7 @@ So I can manage expected traffic of trains,
 Stations should be instantiated with a passed capacity.
 ```
 
-Stations can store a maximum number of trains [ ]
+Stations can store a maximum number of trains [✓]
 ```
 As a Station Manager,
 So I avoid trains crashing,

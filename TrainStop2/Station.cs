@@ -7,6 +7,7 @@ namespace TrainStop2
     {
         void ReceiveTrain(ITrain train);
         void ReleaseTrain(string trainName);
+        void StartMaintenance();
     }
 
     public class Station : IStation
@@ -15,6 +16,7 @@ namespace TrainStop2
         private readonly List<ITrain> _trains;
         private const int _defaultCapacity = 6;
         private readonly int _capacity;
+        private readonly bool _underMaintenance;
 
         public Station(string name)
         {
@@ -73,6 +75,11 @@ namespace TrainStop2
             }
         }
 
+        public void StartMaintenance()
+        {
+
+        }
+
         public string Name
         {
             get
@@ -102,6 +109,14 @@ namespace TrainStop2
             get
             {
                 return _capacity;
+            }
+        }
+
+        public bool UnderMaintenance
+        {
+            get
+            {
+                return _underMaintenance;
             }
         }
     }

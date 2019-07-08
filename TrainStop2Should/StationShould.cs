@@ -161,5 +161,13 @@ namespace TrainStop2Should
                 _station.ReceiveTrain(mockTrain.Object);
             }).Message.ShouldBe($"{_name} cannot receive another train! At capacity.");
         }
+
+        [Fact]
+        public void AllowForMaintenance()
+        {
+            _station.UnderMaintenance.ShouldBeFalse();
+            _station.StartMaintenance();
+            _station.UnderMaintenance.ShouldBeTrue();
+        }
     }
 }
