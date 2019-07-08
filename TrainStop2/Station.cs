@@ -13,6 +13,8 @@ namespace TrainStop2
     {
         private readonly string _name;
         private readonly List<ITrain> _trains;
+        private const int _defaultCapacity = 6;
+        private readonly int _capacity;
 
         public Station(string name)
         {
@@ -72,6 +74,22 @@ namespace TrainStop2
             get
             {
                 return _trains;
+            }
+        }
+
+        public int DefaultCapacity
+        {
+            get
+            {
+                return _defaultCapacity;
+            }
+        }
+
+        public int Capacity
+        {
+            get
+            {
+                return _capacity;
             }
         }
     }

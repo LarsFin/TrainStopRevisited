@@ -132,5 +132,11 @@ namespace TrainStop2Should
                 _station.ReleaseTrain(fakeName);
             }).Message.ShouldBe($"The train {fakeName} has not been stopped; so cannot be released!");
         }
+
+        [Fact]
+        public void HaveDefaultCapacity()
+        {
+            _station.Capacity.ShouldBe(_station.DefaultCapacity);
+        }
     }
 }
