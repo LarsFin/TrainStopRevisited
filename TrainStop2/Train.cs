@@ -1,9 +1,9 @@
-﻿using System;
-namespace TrainStop2
+﻿namespace TrainStop2
 {
     public class Train
     {
         private readonly string _name;
+        private bool _isMoving;
 
         public Train(string name)
         {
@@ -15,6 +15,14 @@ namespace TrainStop2
             get
             {
                 return _name;
+            }
+        }
+
+        public bool IsMoving
+        {
+            get
+            {
+                return _isMoving;
             }
         }
     }

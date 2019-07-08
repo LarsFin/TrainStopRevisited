@@ -19,5 +19,11 @@ namespace TrainStop2Should
         {
             train.Name.ShouldBe(name);
         }
+
+        [Fact]
+        public void HasMovingStatus()
+        {
+            train.IsMoving.ShouldBe(false);
+        }
     }
 }
