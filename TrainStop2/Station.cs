@@ -37,7 +37,10 @@ namespace TrainStop2
             List<ITrain> toBeRemoved = new List<ITrain>();
             foreach (ITrain train in _trains)
             {
-                toBeRemoved.Add(train);
+                if (train.Name.Equals(trainName))
+                {
+                    toBeRemoved.Add(train);
+                }
             }
             foreach (ITrain train in toBeRemoved)
             {
