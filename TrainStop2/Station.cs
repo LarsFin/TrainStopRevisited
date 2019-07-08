@@ -34,6 +34,10 @@ namespace TrainStop2
 
         public void ReceiveTrain(ITrain train)
         {
+            if (_underMaintenance)
+            {
+                throw new ApplicationException($"{_name} is currently under maintenance so cannot receive train!");
+            }
             if (_trains.Count >= _capacity)
             {
                 throw new ApplicationException($"{_name} cannot receive another train! At capacity.");
