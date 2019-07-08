@@ -2,7 +2,12 @@
 
 namespace TrainStop2
 {
-    public class Station
+    public interface IStation
+    {
+        void ReceiveTrain(ITrain train);
+    }
+
+    public class Station : IStation
     {
         private readonly string _name;
         private readonly List<ITrain> _trains;
@@ -11,6 +16,11 @@ namespace TrainStop2
         {
             _name = name;
             _trains = new List<ITrain>();
+        }
+
+        public void ReceiveTrain(ITrain train)
+        {
+
         }
 
         public string Name

@@ -41,7 +41,7 @@ So I can start my train,
 Trains should be able to be set in motion.
 ```
 
-Trains's state of motion can be set to false [ ]
+Trains's state of motion can be set to false [✓]
 ```
 As a Train Manager,
 So I can stop my train,
