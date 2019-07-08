@@ -97,7 +97,7 @@ To make sure trains slowly leave the station,
 Stations should only release Trains which are stopped.
 ```
 
-Stations are instantiated with a maximum capacity for trains [ ]
+Stations are instantiated with a maximum capacity for trains [✓]
 ```
 As a Station Manager,
 So I can avoid needless work,
