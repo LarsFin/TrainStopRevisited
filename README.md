@@ -118,7 +118,7 @@ So I avoid trains crashing,
 Stations should not receive a train when at capacity.
 ```
 
-Stations can be set have maintenance on them [ ]
+Stations can be set have maintenance on them [✓]
 ```
 As a Station Manager,
 So my station can grow and repair,

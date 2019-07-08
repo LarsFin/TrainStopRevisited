@@ -169,5 +169,17 @@ namespace TrainStop2Should
             _station.StartMaintenance();
             _station.UnderMaintenance.ShouldBeTrue();
         }
+
+        [Fact]
+        public void NotReceiveTrainsWhileUnderMaintenance()
+        {
+            _station.StartMaintenance();
+            var mockTrain = new Mock<ITrain>();
+            mockTrain.SetupGet(train => train.IsMoving).Returns(true);
+            Should.Throw<ApplicationException>(() =>
+            {
+                _station.ReceiveTrain(mockTrain.Object);
+            }).Message.ShouldBe($"{_name} is currently under maintenance so cannot receive train!");
+        }
     }
 }
