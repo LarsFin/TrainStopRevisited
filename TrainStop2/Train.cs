@@ -7,6 +7,7 @@ namespace TrainStop2
 
         public Train(string name)
         {
+            _name = name;
         }
 
         public string Name
