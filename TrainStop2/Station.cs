@@ -24,6 +24,7 @@ namespace TrainStop2
             if (train.IsMoving)
             {
                 _trains.Add(train);
+                train.StopMovement();
             } else
             {
                 throw new ApplicationException("Station cannot accept stopped train");

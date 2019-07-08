@@ -62,7 +62,7 @@ To make sure trains park within the station,
 Stations should only take Trains on a journey.
 ```
 
-Trains received by Stations should have their journies stopped [ ]
+Trains received by Stations should have their journies stopped [✓]
 ```
 As a Train Manager,
 So passengers can easily dissembark,
