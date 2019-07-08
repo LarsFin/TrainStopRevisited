@@ -17,7 +17,7 @@
 
         public void SetMoving(bool status)
         {
-
+            _isMoving = status;
         }
 
         public string Name

@@ -34,7 +34,7 @@ So I can stop my train at a station,
 Stations should be able to hold a train.
 ```
 
-Train's state of motion can be set to true [ ]
+Train's state of motion can be set to true [✓]
 ```
 As a Train Manager,
 So I can start my train,
