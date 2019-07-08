@@ -9,30 +9,30 @@ namespace TrainStop2Should
 {
     public class StationShould
     {
-        Station station;
-        string name = "London Waterloo";
+        private Station _station;
+        private string _name = "London Waterloo";
 
         public StationShould()
         {
-            station = new Station(name);
+            _station = new Station(_name);
         }
 
         [Fact]
         public void HavePassedName()
         {
-            station.Name.ShouldBe(name);
+            _station.Name.ShouldBe(_name);
         }
 
         [Fact]
         public void HaveListForTrains()
         {
-            station.Trains.ShouldBeOfType<List<ITrain>>();
+            _station.Trains.ShouldBeOfType<List<ITrain>>();
         }
 
         [Fact]
         public void HaveEmptyListOfTrains()
         {
-            station.Trains.ShouldBeEmpty();
+            _station.Trains.ShouldBeEmpty();
         }
 
         [Fact]
@@ -40,8 +40,8 @@ namespace TrainStop2Should
         {
             var mockTrain = new Mock<ITrain>();
             mockTrain.SetupGet(train => train.IsMoving).Returns(true);
-            station.ReceiveTrain(mockTrain.Object);
-            station.Trains.Contains(mockTrain.Object).ShouldBeTrue();
+            _station.ReceiveTrain(mockTrain.Object);
+            _station.Trains.Contains(mockTrain.Object).ShouldBeTrue();
         }
 
         [Fact]
@@ -50,8 +50,17 @@ namespace TrainStop2Should
             var mockTrain = new Mock<ITrain>();
             Should.Throw<ApplicationException>(() =>
             {
-                station.ReceiveTrain(mockTrain.Object);
+                _station.ReceiveTrain(mockTrain.Object);
             }).Message.ShouldBe("Station cannot accept stopped train");
+        }
+
+        [Fact]
+        public void StopReceivedTrains()
+        {
+            var mockTrain = new Mock<ITrain>();
+            mockTrain.SetupGet(train => train.IsMoving).Returns(true);
+            _station.ReceiveTrain(mockTrain.Object);
+            mockTrain.Verify(train => train.StopMovement(), Times.Once());
         }
     }
 }
