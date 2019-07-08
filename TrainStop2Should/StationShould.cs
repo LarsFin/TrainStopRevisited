@@ -146,5 +146,20 @@ namespace TrainStop2Should
             _station = new Station(_name, customCapacity);
             _station.Capacity.ShouldBe(customCapacity);
         }
+
+        [Fact]
+        public void NotAcceptTrainAtCapacity()
+        {
+            var mockTrain = new Mock<ITrain>();
+            mockTrain.SetupGet(train => train.IsMoving).Returns(true);
+            for (int i = 0; i < _station.Capacity; i++)
+            {
+                _station.ReceiveTrain(mockTrain.Object);
+            }
+            Should.Throw<ApplicationException>(() =>
+            {
+                _station.ReceiveTrain(mockTrain.Object);
+            }).Message.ShouldBe($"{_name} cannot receive another train! At capacity.");
+        }
     }
 }
