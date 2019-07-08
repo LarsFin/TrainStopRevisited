@@ -90,7 +90,7 @@ So I can make it on time to my destinations,
 Train journies should be started when leaving a station.
 ```
 
-Stations can only release stopped trains [ ]
+Stations can only release stopped trains [✓]
 ```
 As a Station Manager,
 To make sure trains slowly leave the station,

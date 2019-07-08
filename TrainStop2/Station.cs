@@ -40,6 +40,10 @@ namespace TrainStop2
             {
                 if (train.Name.Equals(trainName))
                 {
+                    if (train.IsMoving)
+                    {
+                        throw new ApplicationException($"The train {trainName} has not been stopped; so cannot be released!");
+                    }
                     toBeRemoved.Add(train);
                     trainAtStation = true;
                 }
