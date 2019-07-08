@@ -16,7 +16,7 @@ namespace TrainStop2
         private readonly List<ITrain> _trains;
         private const int _defaultCapacity = 6;
         private readonly int _capacity;
-        private readonly bool _underMaintenance;
+        private bool _underMaintenance;
 
         public Station(string name)
         {
@@ -77,7 +77,7 @@ namespace TrainStop2
 
         public void StartMaintenance()
         {
-
+            _underMaintenance = true;
         }
 
         public string Name
