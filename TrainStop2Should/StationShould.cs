@@ -138,5 +138,13 @@ namespace TrainStop2Should
         {
             _station.Capacity.ShouldBe(_station.DefaultCapacity);
         }
+
+        [Fact]
+        public void SetPassedCapacity()
+        {
+            int customCapacity = 2;
+            _station = new Station(_name, customCapacity);
+            _station.Capacity.ShouldBe(customCapacity);
+        }
     }
 }

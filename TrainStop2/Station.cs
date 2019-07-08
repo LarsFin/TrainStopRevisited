@@ -23,6 +23,12 @@ namespace TrainStop2
             _capacity = _defaultCapacity;
         }
 
+        public Station(string name, int customCapacity)
+        {
+            _name = name;
+            _trains = new List<ITrain>();
+        }
+
         public void ReceiveTrain(ITrain train)
         {
             if (train.IsMoving)
