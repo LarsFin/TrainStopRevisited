@@ -1,0 +1,28 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainStop2", "TrainStop2\TrainStop2.csproj", "{DE79BBD6-6CA8-4427-8332-1D12367E67F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4E87EE0-2CFB-4FD5-8D19-09B7CD0389B8}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainStop2Should", "TrainStop2Should\TrainStop2Should.csproj", "{7F90BCCC-6391-49E8-9B6D-452612DBD4FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE79BBD6-6CA8-4427-8332-1D12367E67F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE79BBD6-6CA8-4427-8332-1D12367E67F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE79BBD6-6CA8-4427-8332-1D12367E67F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE79BBD6-6CA8-4427-8332-1D12367E67F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F90BCCC-6391-49E8-9B6D-452612DBD4FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F90BCCC-6391-49E8-9B6D-452612DBD4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F90BCCC-6391-49E8-9B6D-452612DBD4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F90BCCC-6391-49E8-9B6D-452612DBD4FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
