@@ -20,7 +20,7 @@ namespace TrainStop2
 
         public void ReceiveTrain(ITrain train)
         {
-
+            _trains.Add(train);
         }
 
         public string Name

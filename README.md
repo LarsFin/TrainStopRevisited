@@ -48,7 +48,7 @@ So I can stop my train,
 Trains should be able to be set as stopped.
 ```
 
-Stations should be able to receive trains [ ]
+Stations should be able to receive trains [✓]
 ```
 As a Train Manager,
 So I can enter a station by train,
