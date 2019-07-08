@@ -4,6 +4,7 @@
     {
         void StartMovement();
         void StopMovement();
+        bool IsMoving { get; }
     }
 
     public class Train : ITrain

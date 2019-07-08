@@ -1,5 +1,6 @@
 ﻿using Moq;
 using Shouldly;
+using System;
 using System.Collections.Generic;
 using TrainStop2;
 using Xunit;
@@ -37,9 +38,20 @@ namespace TrainStop2Should
         [Fact]
         public void TakeTrains()
         {
-            var mockTrain = new Mock<Train>("name");
+            var mockTrain = new Mock<ITrain>();
+            mockTrain.SetupGet(train => train.IsMoving).Returns(true);
             station.ReceiveTrain(mockTrain.Object);
             station.Trains.Contains(mockTrain.Object).ShouldBeTrue();
+        }
+
+        [Fact]
+        public void ThrowExceptionTakingStoppedTrains()
+        {
+            var mockTrain = new Mock<ITrain>();
+            Should.Throw<ApplicationException>(() =>
+            {
+                station.ReceiveTrain(mockTrain.Object);
+            });
         }
     }
 }
