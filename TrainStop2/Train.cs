@@ -3,6 +3,7 @@
     public interface ITrain
     {
         void StartMovement();
+        void StopMovement();
     }
 
     public class Train : ITrain
@@ -18,6 +19,11 @@
         public void StartMovement()
         {
             _isMoving = true;
+        }
+
+        public void StopMovement()
+        {
+            
         }
 
         public string Name

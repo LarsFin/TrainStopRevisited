@@ -23,14 +23,22 @@ namespace TrainStop2Should
         [Fact]
         public void HasMovingStatus()
         {
-            train.IsMoving.ShouldBe(false);
+            train.IsMoving.ShouldBeFalse();
         }
 
         [Fact]
         public void BeAbleToStartMovement()
         {
             train.StartMovement();
-            train.IsMoving.ShouldBe(true);
+            train.IsMoving.ShouldBeTrue();
+        }
+
+        [Fact]
+        public void BeAbleToStopMovement()
+        {
+            train.StartMovement();
+            train.StopMovement();
+            train.IsMoving.ShouldBeFalse();
         }
     }
 }
