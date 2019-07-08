@@ -69,7 +69,7 @@ So passengers can easily dissembark,
 Trains should be stopped at Stations.
 ```
 
-Trains can depart from Stations [ ]
+Trains can depart from Stations [✓]
 ```
 As a Train Manager,
 So I can leave a station by train,

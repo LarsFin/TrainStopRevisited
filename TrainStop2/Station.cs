@@ -34,7 +34,10 @@ namespace TrainStop2
 
         public void ReleaseTrain(string trainName)
         {
-
+            for (int i = 0; i < _trains.Count; i++)
+            {
+                _trains.Remove(_trains[i]);
+            }
         }
 
         public string Name
