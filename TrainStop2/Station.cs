@@ -32,6 +32,10 @@ namespace TrainStop2
 
         public void ReceiveTrain(ITrain train)
         {
+            if (_trains.Count >= _capacity)
+            {
+                throw new ApplicationException($"{_name} cannot receive another train! At capacity.");
+            }
             if (train.IsMoving)
             {
                 _trains.Add(train);
