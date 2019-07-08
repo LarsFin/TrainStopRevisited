@@ -2,7 +2,7 @@
 {
     public interface ITrain
     {
-
+        void SetMoving(bool status);
     }
 
     public class Train : ITrain
@@ -13,6 +13,11 @@
         public Train(string name)
         {
             _name = name;
+        }
+
+        public void SetMoving(bool status)
+        {
+
         }
 
         public string Name
