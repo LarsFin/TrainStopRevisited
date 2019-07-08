@@ -35,12 +35,18 @@ namespace TrainStop2
         public void ReleaseTrain(string trainName)
         {
             List<ITrain> toBeRemoved = new List<ITrain>();
+            bool trainAtStation = false;
             foreach (ITrain train in _trains)
             {
                 if (train.Name.Equals(trainName))
                 {
                     toBeRemoved.Add(train);
+                    trainAtStation = true;
                 }
+            }
+            if (!trainAtStation)
+            {
+                throw new ApplicationException($"The train {trainName} does not exist at {_name} station!");
             }
             foreach (ITrain train in toBeRemoved)
             {

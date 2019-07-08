@@ -76,7 +76,7 @@ So I can leave a station by train,
 Stations should have an effective method by which to release trains.
 ```
 
-Exception thrown when a train which doesn't exist is released from station [ ]
+Exception thrown when a train which doesn't exist is released from station [✓]
 ```
 As a Station Manager,
 So I know when a train release was faulty,
