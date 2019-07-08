@@ -6,6 +6,7 @@ namespace TrainStop2
     public interface IStation
     {
         void ReceiveTrain(ITrain train);
+        void ReleaseTrain(string trainName);
     }
 
     public class Station : IStation
@@ -29,6 +30,11 @@ namespace TrainStop2
             {
                 throw new ApplicationException("Station cannot accept stopped train");
             }
+        }
+
+        public void ReleaseTrain(string trainName)
+        {
+
         }
 
         public string Name

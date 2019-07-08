@@ -62,5 +62,17 @@ namespace TrainStop2Should
             _station.ReceiveTrain(mockTrain.Object);
             mockTrain.Verify(train => train.StopMovement(), Times.Once());
         }
+
+        [Fact]
+        public void ReleaseTrains()
+        {
+            string fakeName = "fake~name";
+            var mockTrain = new Mock<ITrain>();
+            mockTrain.SetupGet(train => train.IsMoving).Returns(true);
+            _station.ReceiveTrain(mockTrain.Object);
+            mockTrain.SetupGet(train => train.Name).Returns(fakeName);
+            _station.ReleaseTrain(fakeName);
+            _station.Trains.Contains(mockTrain.Object).ShouldBeFalse();
+        }
     }
 }
