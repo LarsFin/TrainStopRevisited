@@ -132,7 +132,7 @@ To prevent any accidents,
 Stations should not receive or release a train when under maintenance.
 ```
 
-Maintenance on stations can end [ ]
+Maintenance on stations can end [✓]
 ```
 As a Station Manager,
 So my station can be accessible again to trains,

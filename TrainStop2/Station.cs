@@ -91,7 +91,7 @@ namespace TrainStop2
 
         public void StopMaintenance()
         {
-            
+            _underMaintenance = false;
         }
 
         public string Name
