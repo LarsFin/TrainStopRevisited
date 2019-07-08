@@ -29,6 +29,12 @@ namespace TrainStop2Should
         }
 
         [Fact]
+        public void HaveEmptyListOfTrains()
+        {
+            station.Trains.ShouldBeEmpty();
+        }
+
+        [Fact]
         public void TakeTrains()
         {
             var mockTrain = new Mock<Train>("name");
