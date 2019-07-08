@@ -6,7 +6,7 @@ Also, using Shouldly for more fluent assertions. For testing; using xUnit.
 
 User Stories;
 
-Trains have names [ ]
+Trains have names [✓]
 ```
 As a Train Manager,
 So I can easily refer to my train,

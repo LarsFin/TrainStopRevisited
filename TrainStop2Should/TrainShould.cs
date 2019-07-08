@@ -15,7 +15,7 @@ namespace TrainStop2Should
         }
 
         [Fact]
-        public void havePassedName()
+        public void HavePassedName()
         {
             train.Name.ShouldBe(name);
         }
