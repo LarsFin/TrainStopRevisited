@@ -118,5 +118,19 @@ namespace TrainStop2Should
             _station.ReleaseTrain(fakeName);
             mockTrain.Verify(train => train.StartMovement(), Times.Once());
         }
+
+        [Fact]
+        public void OnlyReleaseStoppedTrains()
+        {
+            string fakeName = "fake~name";
+            var mockTrain = new Mock<ITrain>();
+            mockTrain.SetupGet(train => train.IsMoving).Returns(true);
+            _station.ReceiveTrain(mockTrain.Object);
+            mockTrain.SetupGet(train => train.Name).Returns(fakeName);
+            Should.Throw<ApplicationException>(() =>
+            {
+                _station.ReleaseTrain(fakeName);
+            }).Message.ShouldBe($"The train {fakeName} has not been stopped; so cannot be released!");
+        }
     }
 }
