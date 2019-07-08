@@ -197,5 +197,13 @@ namespace TrainStop2Should
                 _station.ReleaseTrain(fakeName);
             }).Message.ShouldBe($"{_name} is currently under maintenance so cannot release train!");
         }
+
+        [Fact]
+        public void AllowForStoppingOfMaintenance()
+        {
+            _station.StartMaintenance();
+            _station.StopMaintenance();
+            _station.UnderMaintenance.ShouldBeFalse();
+        }
     }
 }

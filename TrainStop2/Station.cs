@@ -8,6 +8,7 @@ namespace TrainStop2
         void ReceiveTrain(ITrain train);
         void ReleaseTrain(string trainName);
         void StartMaintenance();
+        void StopMaintenance();
     }
 
     public class Station : IStation
@@ -86,6 +87,11 @@ namespace TrainStop2
         public void StartMaintenance()
         {
             _underMaintenance = true;
+        }
+
+        public void StopMaintenance()
+        {
+            
         }
 
         public string Name
