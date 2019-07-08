@@ -1,6 +1,11 @@
 ﻿namespace TrainStop2
 {
-    public class Train
+    public interface ITrain
+    {
+
+    }
+
+    public class Train : ITrain
     {
         private readonly string _name;
         private bool _isMoving;

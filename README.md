@@ -20,7 +20,7 @@ So I can easily refer to my destinations,
 Stations should have names.
 ```
 
-Trains have a state of motion [ ]
+Trains have a state of motion [✓]
 ```
 As a Train Manager,
 So I know when a train has left,

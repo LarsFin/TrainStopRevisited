@@ -1,4 +1,5 @@
 ﻿using Shouldly;
+using System.Collections.Generic;
 using TrainStop2;
 using Xunit;
 
@@ -18,6 +19,12 @@ namespace TrainStop2Should
         public void HavePassedName()
         {
             station.Name.ShouldBe(name);
+        }
+
+        [Fact]
+        public void HaveListForTrains()
+        {
+            station.Trains.ShouldBeOfType<List<ITrain>>();
         }
     }
 }
