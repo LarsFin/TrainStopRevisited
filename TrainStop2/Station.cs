@@ -27,6 +27,7 @@ namespace TrainStop2
         {
             _name = name;
             _trains = new List<ITrain>();
+            _capacity = customCapacity;
         }
 
         public void ReceiveTrain(ITrain train)

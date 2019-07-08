@@ -104,7 +104,7 @@ So I can avoid needless work,
 Not passing a capacity will set a default capacity value.
 ```
 
-Stations can be instantiated with a maximum capacity passed for trains [ ]
+Stations can be instantiated with a maximum capacity passed for trains [✓]
 ```
 As a Station Manager,
 So I can manage expected traffic of trains,
